@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="green_frog_cms.page_manager.class">GreenFrog\Bundle\CmsBundle\Manager\PageManager</parameter>
+<!--        <parameter key="green_frog_cms.menu_renderer.class">GreenFrog\Bundle\CmsBundle\Menu\MenuRenderer</parameter>
+        <parameter key="green_frog_cms.menu_renderer.arguments" type="collection">
+            <parameter>@twig</parameter>
+            <parameter>GreenFrogCmsBundle:Menu:menu.html.twig</parameter>
+        </parameter>-->
+    </parameters>
+
+    <services>
+        <service id="green_frog_cms.page_manager" class="%green_frog_cms.page_manager.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+<!--        <service id="green_frog_cms.menu_renderer" class="%green_frog_cms.menu_renderer.class%">
+            <tag name="knp_menu.renderer" alias="custom" />
+            <argument type="collection">%green_frog_cms.menu_renderer.arguments%</argument>
+            <tag name="green_frog_cms.menu_renderer" alias="custom" />
+            <argument type="service" id="knp_menu.renderer" />
+        </service>-->
+    </services>
+</container>

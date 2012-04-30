@@ -1,0 +1,5 @@
+<ul class="nav">
+{% for item in nav %}
+    <li {% if item.active %}class="active"{% endif %}><a href="{{ path('navigation', { 'slug': item.slug }) }}">{{ item.name|title }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,15 @@
+services:
+    green_frog.menu_main:
+        class: GreenFrog\Bundle\CmsBundle\Menu\MenuRenderer
+        arguments:
+            - @twig
+            - 'GreenFrogCmsBundle:Menu:menu.html.twig'
+        tags:
+            - { name: knp_menu.renderer, alias: main }
+    green_frog.menu_sidebar:
+        class: GreenFrog\Bundle\CmsBundle\Menu\SidebarRenderer
+        arguments:
+            - @twig
+            - 'GreenFrogCmsBundle:Menu:menu.html.twig'
+        tags:
+            - { name: knp_menu.renderer, alias: sidebar }

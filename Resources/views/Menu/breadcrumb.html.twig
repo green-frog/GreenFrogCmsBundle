@@ -1,0 +1,11 @@
+<ul class="breadcrumb">
+{% for page in breadcrumb %}
+    <li>
+    {% if not page.is_last %}
+    <a href="{{ path('navigation', { 'slug': page.slug }) }}">{{ page.name|title }}</a> <span class="divider">/</span>
+    {% else %}
+    {{ page.name|title }}
+    {% endif %}
+    </li>
+{% endfor %}
+</ul>

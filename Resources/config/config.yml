@@ -1,0 +1,29 @@
+imports:
+    # - { resource: routing.yml }
+    # - { resource: security.yml }
+
+framework:
+    translator: ~
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: GreenFrog\Bundle\CmsBundle\Entity\User
+    registration:
+      confirmation:
+        enabled: true
+        from_email:
+#          address: noreply@dota-reloaded.com
+          address: noreply@free.fr
+          sender_name: Dota-Reloaded.com
+        template: GreenFrogUserBundle:User:confirm_email.html.twig
+#    template:
+#        theme: GreenFrogCmsBundle:User:register.html.twig
+#knp_menu:
+#    twig:
+#        template: GreenFrogCmsBundle:Menu:menu.html.twig
+green_frog_cms:
+    site:
+      name: Dota 2 Reloaded
+      title: Dota 2 Reloaded Gaming network - Play with friends !
+      page_title: Dota 2 Reloaded Gaming
