@@ -13,17 +13,11 @@ fos_user:
       confirmation:
         enabled: true
         from_email:
-#          address: noreply@dota-reloaded.com
           address: noreply@free.fr
-          sender_name: Dota-Reloaded.com
+          sender_name: Sender Name
         template: GreenFrogUserBundle:User:confirm_email.html.twig
-#    template:
-#        theme: GreenFrogCmsBundle:User:register.html.twig
-#knp_menu:
-#    twig:
-#        template: GreenFrogCmsBundle:Menu:menu.html.twig
 green_frog_cms:
     site:
-      name: Dota 2 Reloaded
-      title: Dota 2 Reloaded Gaming network - Play with friends !
-      page_title: Dota 2 Reloaded Gaming
+      name: Sitename
+      title: Homepage title
+      page_title: Pages title

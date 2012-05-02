@@ -37,6 +37,9 @@ class DefaultController extends Controller
         if(!$page) {
             throw new NotFoundHttpException('The page "'.$slug.'" doesnt not exist');
         }
+        
+        // TODO : set layouts
+
         return array(
             'gf_cms' => $this->getVars(),
             'breadcrumb' => $breadcrumb,
